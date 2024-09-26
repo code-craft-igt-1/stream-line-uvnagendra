@@ -33,6 +33,7 @@ class VitalSignsGenerator:
         Generates and prints 50 sets of random vital signs to the console.
         """
         vital_signs = VitalSignsGenerator.generate_vital_signs()
+        print("\ntemperature|spo2|pulse_rate")
         for vs in vital_signs:
             print(vs)
 
