@@ -1,4 +1,4 @@
-from vital_sender import *
+from vital_sender import VitalSignsGenerator
 import unittest
 
 class TestGenerateVitalSigns(unittest.TestCase):
@@ -14,7 +14,7 @@ class TestGenerateVitalSigns(unittest.TestCase):
         """
         Test that the generate_vital_signs function generates exactly 50 sets of vital signs.
         """
-        vital_signs = generate_vital_signs()
+        vital_signs = VitalSignsGenerator.generate_vital_signs()
         self.assertEqual(len(vital_signs), 50, "Should generate 50 sets of vital signs")
     
     def test_generate_vital_signs_values(self):
@@ -26,7 +26,7 @@ class TestGenerateVitalSigns(unittest.TestCase):
         - SpO2: 95 to 100 percent
         - Pulse rate: 60 to 100 beats per minute
         """
-        vital_signs = generate_vital_signs()
+        vital_signs = VitalSignsGenerator.generate_vital_signs()
         for vs in vital_signs:
             temperature, spo2, pulse_rate = map(float, vs.split('|'))
             self.assertTrue(36.0 <= temperature <= 37.5, "Temperature out of range")
