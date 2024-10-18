@@ -37,7 +37,7 @@ def run_sender_exe():
     """
     try:
         result = subprocess.run(
-            [r'C:\Users\320172557\Documents\CodeCraftSkills\stream-line-uvnagendra\Sasikala_Sender\sender.exe'],
+            [r'Sasikala_Sender\sender.exe'],
             capture_output=True, text=True, check=True
         )
 
