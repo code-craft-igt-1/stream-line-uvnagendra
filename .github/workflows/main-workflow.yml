@@ -34,5 +34,5 @@ jobs:
       run: python vital_sender_test.py
 
     - name: vital sender test
-      run: python vital_processor.py
+      run: python Vital_Processor\vital_processor.py
 
